@@ -1,0 +1,13 @@
+version: "2"
+services:
+  duckdns:
+    image: linuxserver/duckdns
+    container_name: duckdns
+    environment:
+      - TZ=America/Santo_Domingo
+      - SUBDOMAINS=kr1ps.duckdns.org
+      - TOKEN=ec979d9a-d0a7-48ba-be3c-f74802e2ccbb
+      - LOG_FILE=false #optional
+    volumes:
+      - /home/docker/duckdns/config:/config #optional
+    restart: unless-stopped
