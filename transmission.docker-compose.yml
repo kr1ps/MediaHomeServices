@@ -1,4 +1,4 @@
-version: "2/"
+version: "2"
 services:
   transmission:
     image: linuxserver/transmission
@@ -12,10 +12,10 @@ services:
       - PASS=P@ssw0rd #optional
     volumes:
       - ./data:/config
-      - /sharedfolders/media:/downloads
-      - /sharedfolders/Downloads/torrentfiles:/watch
+      - /media/downloads:/downloads
+      - ./watch:/watch
     ports:
       - 9091:9091
       - 51413:51413
       - 51413:51413/udp
-    restart: unless-stopped41
+    restart: unless-stopped
