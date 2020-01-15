@@ -3,23 +3,22 @@ version: "3.5"
 services:
   db:
     image: mariadb:10.2
-    container_name: librenms_db
+    container_name: maria-db
     command:
       - "mysqld"
       - "--sql-mode="
       - "--innodb-file-per-table=1"
-      - "--lower-case-table-names=0"
+     # - "--lower-case-table-names=0"
       - "--character-set-server=utf8"
       - "--collation-server=utf8_unicode_ci"
+    restart: always
     volumes:
-      - "./db:/var/lib/mysql"
+      - ./db:/var/lib/mariadb
     environment:
-      - "TZ=${TZ}"
       - "MYSQL_ALLOW_EMPTY_PASSWORD=yes"
       - "MYSQL_DATABASE=${MYSQL_DATABASE}"
       - "MYSQL_USER=${MYSQL_USER}"
       - "MYSQL_PASSWORD=${MYSQL_PASSWORD}"
-    restart: always
 
   memcached:
     image: memcached:alpine
@@ -49,7 +48,7 @@ services:
     volumes:
       - "/etc/localtime:/etc/localtime:ro"
     environment:
-      - "SERVER_HOSTNAME=librenms.example.com"
+      - "SERVER_HOSTNAME=librenms.kr1ps.com"
       - "SMTP_SERVER=${SMTP_SERVER}"
       - "SMTP_USERNAME=${SMTP_USERNAME}"
       - "SMTP_PASSWORD=${SMTP_PASSWORD}"
@@ -58,11 +57,11 @@ services:
   librenms:
     image: librenms/librenms:latest
     container_name: librenms
-    domainname: example.com
+    domainname: kr1ps.com
     hostname: librenms
     ports:
       - target: 8000
-        published: 8000
+        published: 8095
         protocol: tcp
     depends_on:
       - db
@@ -87,7 +86,7 @@ services:
   cron:
     image: librenms/librenms:latest
     container_name: librenms_cron
-    domainname: example.com
+    domainname: kr1ps.com
     hostname: librenms
     depends_on:
       - librenms
@@ -110,7 +109,7 @@ services:
   syslog-ng:
     image: librenms/librenms:latest
     container_name: librenms_syslog
-    domainname: example.com
+    domainname: kr1ps.com
     hostname: librenms
     depends_on:
       - librenms
