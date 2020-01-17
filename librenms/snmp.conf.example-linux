@@ -9,14 +9,14 @@ view   systemonly  included   .1.3.6.1.2.1.1
 view   systemonly  included   .1.3.6.1.2.1.25.1
 
 #  Default access to full view
-rocommunity community_string  default    -V all
+rocommunity scommunity  default    -V all
 
 #  Default access to basic system info
 #rocommunity public  default    -V systemonly
 
 #  System contact and location
-syslocation Rack/Room/Building, Street, City, Country [GPSX,Y]
-syscontact Contact Person <me@kr1ps.com>
+syslocation DC kr1ps home
+syscontact me@kr1ps.com
 
 #  Disk Monitoring
 disk       /     10000
