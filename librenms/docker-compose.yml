@@ -13,7 +13,7 @@ services:
       - "--collation-server=utf8_unicode_ci"
     restart: always
     volumes:
-      - ./db:/var/lib/mariadb
+      - ./db:/var/lib/mysql
     environment:
       - "MYSQL_ALLOW_EMPTY_PASSWORD=yes"
       - "MYSQL_DATABASE=${MYSQL_DATABASE}"
