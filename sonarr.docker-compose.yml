@@ -6,7 +6,7 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=Europe/London
+      - TZ=America/Santo_Domingo
       - UMASK_SET=022 #optional
     volumes:
       - ./config:/config
