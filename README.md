@@ -1,11 +1,12 @@
 ## Kr1psIaac
 ![](http://kr1ps.com/wp-content/uploads/2020/03/navigate-to-start-letter-k-sign-180x180.png)
 
-Hi, this repo contain all my home media services environment. everything are in docker-compose and the purpose is to move all of them to k8s template.
+Hi, this repo contain all my home media services environment. everything are in docker-compose and the purpose is to convert all of them to k8s template and deploy in my local rke cluster https://rancher.kr1ps.com/.
 
 ## Table of Contents
 
 - [Plex Server](#Plex-Server)
+- [Download Manager](#Download-Manager)
 - [Demo](#demo)
   - [Vanilla, no framework](#vanilla-no-framework)
   - [With Bootstrap](#with-bootstrap)
@@ -58,7 +59,18 @@ Hi, this repo contain all my home media services environment. everything are in 
 - [Contributors](#contributors)
 
 ## Plex Server
-I select Plex for my media server (video, image and audio). The docker-compose file its here [plex.docker-compose.yml](https://github.com/kr1ps/kr1psiaac/blob/master/plex.docker-compose.yml) and if you want more information about it check the oficial website https://www.plex.tv/
+
+I chose Plex for my media server (video, image, and audio). The docker-compose file is here [plex.docker-compose.yml](https://github.com/kr1ps/kr1psiaac/blob/master/plex.docker-compose.yml) and if you want more information about it check the oficial website https://www.plex.tv/
+
+With Plex up and running, i need something to feed him.
+
+## Download Manager
+
+There are a large number of download managers. Some examples are: [Transmission](https://transmissionbt.com/), [Utorrent](https://www.utorrent.com/), etc. but for its simplicity I chose [Deluge](https://deluge-torrent.org/). Deluge is well documented and integrates very well with my infrastructure. If you want an example you can check my deployment file [deluge.docker-compose.yml](https://github.com/kr1ps/kr1psiaac/blob/master/deluge.docker-compose.yml).
+
+ 
+
+
 #### Disabled options
 
 - TeX (Based on KaTeX);
