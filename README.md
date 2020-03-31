@@ -1,7 +1,7 @@
 ## Kr1ps - Media Home Services
 ![](http://kr1ps.com/wp-content/uploads/2020/03/navigate-to-start-letter-k-sign-180x180.png)
 
-Hi, this repo contain all my home media services environment deployment files. everything are in docker-compose and the purpose is to convert all of them to k8s template and deploy in my local rke cluster https://rancher.kr1ps.com/.
+Hi, this repo contain all my home media services deployment files. everything are in docker-compose and the purpose is to convert all of them to k8s template and deploy in my local rke cluster https://rancher.kr1ps.com/.
 
 ## Table of Contents
 
