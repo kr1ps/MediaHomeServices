@@ -10,12 +10,9 @@ Hi, this repo contain all my home media services environment. everything are in 
 - [Platforms to search content](#Platforms-to-search-content)
   - [Radarr](#Radarr)
   - [Sonarr](#Sonarr)
-  - [With Material Design](#with-material-design)
-  - [As Single Select](#as-single-select)
-- [Install](#install)
-  - [As NPM package](#as-npm-package)
-  - [Using a CDN](#using-a-cdn)
-  - [Peer Dependencies](#peer-dependencies)
+  - [Jackett](#Jackett)
+  - [Bazarr](#Bazarr)
+
 
 ## Plex Server
 
@@ -29,42 +26,19 @@ There are a large number of download managers. Some examples are: [Transmission]
 
 ## Platforms to search content
 
-##### Radarr
+#### Radarr
 
 [Radarr](https://radarr.video/) is a platform for automatic movie search. This platform automatically searches for movies and places them on your plex server. Here an example deployment file [radarr.docker-compose.yml](https://github.com/kr1ps/kr1ps-MediaHomeServices/blob/master/radarr.docker-compose.yml)
 
-##### Sonarr
+#### Sonarr
 
-Online demo: https://dowjones.github.io/react-dropdown-tree-select/#/story/with-bootstrap-styles
+[Sonarr](https://sonarr.tv/) is a platform for automatic tv series search. This platform automatically searches for tv series and places them on your plex server. Here an example deployment file [sonarr.docker-compose.yml](https://github.com/kr1ps/kr1ps-MediaHomeServices/blob/master/sonarr.docker-compose.yml)
 
+#### Jackett
 
-#### Disabled options
+Sonarr and Radarr repositories to find the media files,  [Jackett](https://libraries.io/github/Jackett/Jackett/) is a platform that serves as a repository database for these types of programs. Here an example deployment file [jackett.docker-compose.yml](https://github.com/kr1ps/kr1ps-MediaHomeServices/blob/master/jackett.docker-compose.yml)
 
-- TeX (Based on KaTeX);
-- Emoji;
-- Task lists;
-- HTML tags decode;
-- Flowchart and Sequence Diagram;
+#### Bazarr
 
-#### Editor.md directory
+Finally, after you download all your movies or tv series, you probably want subtitle in your preference language. For this, [bazarr](https://www.bazarr.media/) do the hard work for you. This little one watches the media folders and automatically downloads your subtitles. Here an example deployment file [bazarr.docker-compose.yml](https://github.com/kr1ps/kr1ps-MediaHomeServices/blob/master/bazarr.docker-compose.yml)
 
-    editor.md/
-            lib/
-            css/
-            scss/
-            tests/
-            fonts/
-            images/
-            plugins/
-            examples/
-            languages/     
-            editormd.js
-            ...
-
-```html
-<!-- English -->
-<script src="../dist/js/languages/en.js"></script>
-
-<!-- 繁體中文 -->
-<script src="../dist/js/languages/zh-tw.js"></script>
-```
