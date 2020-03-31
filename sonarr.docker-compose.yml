@@ -7,7 +7,7 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=America/Santo_Domingo
-      - UMASK_SET=022 #optional
+      - UMASK_SET=022 #optional 
     volumes:
       - ./config:/config
       - /mnt/tv:/tv

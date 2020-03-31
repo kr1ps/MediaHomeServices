@@ -36,7 +36,7 @@ There are a large number of download managers. Some examples are: [Transmission]
 
 #### Jackett
 
-Sonarr and Radarr repositories to find the media files,  [Jackett](https://libraries.io/github/Jackett/Jackett/) is a platform that serves as a repository database for these types of programs. Here an example deployment file [jackett.docker-compose.yml](https://github.com/kr1ps/kr1ps-MediaHomeServices/blob/master/jackett.docker-compose.yml)
+Sonarr and Radarr need repositories to find the media files,  [Jackett](https://libraries.io/github/Jackett/Jackett/) is a platform that serves as a repository database for these types of programs. Here an example deployment file [jackett.docker-compose.yml](https://github.com/kr1ps/kr1ps-MediaHomeServices/blob/master/jackett.docker-compose.yml)
 
 #### Bazarr
 
