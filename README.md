@@ -1,7 +1,7 @@
 ## Kr1ps - Media Home Services
 ![](http://kr1ps.com/wp-content/uploads/2020/03/navigate-to-start-letter-k-sign-180x180.png)
 
-Hi, this repo contain all my home media services environment. everything are in docker-compose and the purpose is to convert all of them to k8s template and deploy in my local rke cluster https://rancher.kr1ps.com/.
+Hi, this repo contain all my home media services environment deployment files. everything are in docker-compose and the purpose is to convert all of them to k8s template and deploy in my local rke cluster https://rancher.kr1ps.com/.
 
 ## Table of Contents
 
@@ -12,6 +12,7 @@ Hi, this repo contain all my home media services environment. everything are in 
   - [Sonarr](#Sonarr)
   - [Jackett](#Jackett)
   - [Bazarr](#Bazarr)
+- [Conclusion](#Conclusion)
 
 
 ## Plex Server
@@ -41,4 +42,9 @@ Sonarr and Radarr need repositories to find the media files,  [Jackett](https://
 #### Bazarr
 
 Finally, after you download all your movies or tv series, you probably want subtitle in your preference language. For this, [bazarr](https://www.bazarr.media/) do the hard work for you. This little one watches the media folders and automatically downloads your subtitles. Here an example deployment file [bazarr.docker-compose.yml](https://github.com/kr1ps/kr1ps-MediaHomeServices/blob/master/bazarr.docker-compose.yml)
+
+## Conclusion
+
+With all this implemented, you will have a very good ecosystem for multimedia consumption.
+
 
