@@ -1,10 +1,11 @@
 ## Kr1psIaac
+![](http://kr1ps.com/wp-content/uploads/2020/03/navigate-to-start-letter-k-sign-180x180.png)
 
-Hi, this repo contain all my home media services environment. everithing are in docker-compose and the purpose is to move all of them to k8s template.
+Hi, this repo contain all my home media services environment. everything are in docker-compose and the purpose is to move all of them to k8s template.
 
 ## Table of Contents
 
-- [Screenshot](#screenshot)
+- [Plex Server](#Plex Server)
 - [Demo](#demo)
   - [Vanilla, no framework](#vanilla-no-framework)
   - [With Bootstrap](#with-bootstrap)
@@ -56,6 +57,8 @@ Hi, this repo contain all my home media services environment. everithing are in 
 - [License](#license)
 - [Contributors](#contributors)
 
+## Plex Server
+I select Plex for my media server (video, image and audio). The docker-compose file its here [plex.docker-compose.yml](https://github.com/kr1ps/kr1psiaac/blob/master/plex.docker-compose.yml) and if you want more information about it check the oficial website https://www.plex.tv/
 #### Disabled options
 
 - TeX (Based on KaTeX);
