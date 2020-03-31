@@ -5,7 +5,7 @@ Hi, this repo contain all my home media services environment. everything are in 
 
 ## Table of Contents
 
-- [Plex Server](##Plex Server)
+- [Plex Server](#Plex-Server)
 - [Demo](#demo)
   - [Vanilla, no framework](#vanilla-no-framework)
   - [With Bootstrap](#with-bootstrap)
